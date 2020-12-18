@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -77,4 +77,3 @@ jobs:
 #          --zapier.hook="$ZAPIER_WEBHOOK" \
 #          --discord.hook="$DISCORD_WEBHOOK"
 #        exit 0
-
