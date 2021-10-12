@@ -6,6 +6,8 @@ plugins {
 
 def buildVersion="0.1"
 
+apply from: "$project.rootDir/jacoco.gradle"
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -24,6 +26,7 @@ android {
             minifyEnabled false
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            testCoverageEnabled true
         }
         release {
             minifyEnabled true
