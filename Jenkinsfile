@@ -13,8 +13,7 @@ pipeline {
 
       steps {
         sh 'pwd'
-        sh 'whoami'
-        sh './gradlew testDevelopmentDebugUnitTestCoverage'
+        sh './gradlew clean assembleDebug testDevelopmentDebugUnitTestCoverage'
       }
     }
   }
