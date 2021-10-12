@@ -12,7 +12,7 @@ pipeline {
       }
 
       steps {
-        sh 'gradle testDevelopmentDebugUnitTestCoverage'
+        sh './gradlew testDevelopmentDebugUnitTestCoverage'
       }
     }
   }
