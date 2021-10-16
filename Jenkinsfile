@@ -13,8 +13,14 @@ pipeline {
 
       steps {
         sh 'pwd'
-        sh './gradlew clean testDevelopmentDebugUnitTestCoverage'
+        sh 'gradle testDevelopmentDebugUnitTestCoverage'
       }
+    }
+  }
+
+  post {
+    always {
+      cleanWs()
     }
   }
 }
