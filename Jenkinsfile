@@ -13,9 +13,19 @@ pipeline {
       }
 
       steps {
-        sh 'pwd'
-        sh 'echo $HOME'
         sh 'gradle testDevelopmentDebugUnitTestCoverage'
+      }
+    }
+
+    stage('Sonarqube analysis') {
+      environment {
+        scannerHome = tool 'sonarqube-scanner'
+      }
+
+      steps {
+        withSonarQubeEnv(installationName: 'sonarqube') {
+          sh '$scannerHome/bin/sonar-scanner'
+        }
       }
     }
   }
