@@ -13,6 +13,7 @@ pipeline {
 
       steps {
         sh 'pwd'
+        sh 'echo $HOME'
         sh 'gradle testDevelopmentDebugUnitTestCoverage'
       }
     }
