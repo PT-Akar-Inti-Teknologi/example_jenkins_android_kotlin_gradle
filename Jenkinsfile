@@ -13,7 +13,7 @@ pipeline {
 
       steps {
         sh 'pwd'
-        sh './gradlew clean assembleDebug testDevelopmentDebugUnitTestCoverage'
+        sh './gradlew clean testDevelopmentDebugUnitTestCoverage'
       }
     }
   }
